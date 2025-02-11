@@ -1,2 +1,3 @@
 # Intermediate
-Training Material
+
+Training material on behalf of Brights.
