@@ -5,7 +5,7 @@ def test_this_will_fail_and_stop_the_test_run():
     """
     You will need to change this test so that the assertion becomes true.
     """
-    assert 1 == 2
+    assert 2 == 2
 
 
 def test_this_always_passes_but_not_until_the_above_has_been_fixed():
@@ -22,11 +22,11 @@ def test_actual_and_expected():
     """
     data = ["a", "c", "b"]
     actual = sorted(data)
-    expected = ...
+    expected = ["a", "b", "c"]
     assert actual == expected
 
 
-@pytest.mark.skip(reason="test can be marked to be skipped")
+# @pytest.mark.skip(reason="test can be marked to be skipped")
 def test_this_also_needs_to_be_fixed():
     """
     Before you fix this test, remove the @pytest.mark.skip line above, and run the tests.
@@ -34,10 +34,10 @@ def test_this_also_needs_to_be_fixed():
 
     Bonus: why is this interpreted as (2 + 2) == 5 and not 2 + (2 == 5)?
     """
-    assert 2 + 2 == 5
+    assert 2 + 2 == 4
 
 
-@pytest.mark.xfail(reason="we expect this test to always fail")
+# @pytest.mark.xfail(reason="we expect this test to always fail")
 def test_expected_failing_test():
     """
     When we know that a test is expected to fail, we can mark it as such.
@@ -47,4 +47,4 @@ def test_expected_failing_test():
     However, we should not let these kinds of tests remain for long in our code base.
     Either fix it or remove it!
     """
-    assert 1 > 2
+    assert 1 < 2
